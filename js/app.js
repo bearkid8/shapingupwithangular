@@ -79,4 +79,10 @@
             this.review = {};
         }
     });
+
+    app.directive('productTitle', function () {
+        return{
+
+        };
+    });
 })();
