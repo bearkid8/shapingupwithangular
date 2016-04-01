@@ -61,15 +61,15 @@
         }
     ];
 
-    app.controller('PanelController', function () {
-        this.tab = 3;
-        this.selectTab = function (setTab) {
-            this.tab = setTab;
-        }
-        this.isSelected = function (checkedTab) {
-            return this.tab === checkedTab;
-        }
-    });
+    // app.controller('PanelController', function () {
+    //     this.tab = 3;
+    //     this.selectTab = function (setTab) {
+    //         this.tab = setTab;
+    //     }
+    //     this.isSelected = function (checkedTab) {
+    //         return this.tab === checkedTab;
+    //     }
+    // });
 
     app.controller("ReviewController", function () {
         this.review = {};
@@ -84,6 +84,23 @@
         return{
             restrict: 'A', //type of Directive (A for attribute)
             templateUrl: 'product-title.html'
+        };
+    });
+
+    app.directive('productPanels', function () {
+        return{
+            restrict: 'E',
+            templateUrl: 'product-panels.html',
+            controller: function () {
+                this.tab = 1;
+                this.selectTab = function (setTab) {
+                    this.tab = setTab;
+                }
+                this.isSelected = function (checkedTab) {
+                    return this.tab === checkedTab;
+                }
+            },
+            controllerAs: 'panel'
         };
     });
 })();
