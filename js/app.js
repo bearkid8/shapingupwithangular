@@ -82,7 +82,7 @@
 
     app.directive('productTitle', function () {
         return{
-            restrict: 'E', //type of Directive (E for Element)
+            restrict: 'A', //type of Directive (A for attribute)
             templateUrl: 'product-title.html'
         };
     });
