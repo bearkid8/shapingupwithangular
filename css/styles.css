@@ -1,0 +1,6 @@
+/*
+  angular ng-dirty class for edited field
+*/
+
+.ng-invalid.ng-dirty{border-color:red;}
+.ng-valid.ng-dirty{border-color:green;}
