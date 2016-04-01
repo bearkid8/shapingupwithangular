@@ -82,7 +82,8 @@
 
     app.directive('productTitle', function () {
         return{
-
+            restrict: 'E', //type of Directive (E for Element)
+            templateUrl: 'product-title.html'
         };
     });
 })();
